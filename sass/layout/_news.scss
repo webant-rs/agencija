@@ -1,0 +1,125 @@
+.news{
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  background-color: $color-secondary;
+  @include respond(phone){
+    padding-top: 2rem;
+  }
+
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__heading{
+    text-align: center;
+    padding-bottom: 1rem;
+
+    h2{
+      font-size: 4.3rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+
+      @include respond(phone){
+        margin-bottom: 2rem;
+        margin-top: 3.3rem;
+      }
+    }
+    p{
+      font-size: 1.8rem;
+      margin: 0 auto 4.4375rem;
+      line-height: 140%;
+      
+      @include respond(phone){
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__row{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &__slider{
+    width: 100%;
+    position: relative;
+  }
+
+  &__image{
+    display: flex;
+    justify-content: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  &__box{
+    text-align: center;
+  }
+
+  .news__prev{
+    margin: 1rem;
+    // position: absolute;
+    // bottom: -10rem;
+    // left: 45%;
+    color: $color-white;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    display: inline-block;
+    cursor: pointer;
+    background-color: $color-secondary;
+    display: block;
+    border: 0.2rem solid $color-white;
+
+    &:hover{
+      color: $color-secondary;
+      background-color: $color-white;
+    }
+
+    @include respond(laptop-small){
+      left: 43%;
+    }
+  }
+
+  .news__next{
+    margin: 1rem;
+    // position: absolute;
+    // bottom: -10rem;
+    // right: 45%;
+    color: $color-white;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    display: inline-block;
+    cursor: pointer;
+    background-color: $color-secondary;
+    display: block;
+    border: 0.2rem solid $color-white;
+
+    &:hover{
+      color: $color-secondary;
+      background-color: $color-white;
+    }
+
+    @include respond(laptop-small){
+      right: 43%;
+    }
+  }
+
+  .news__arrows{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__blog{
+    h3{
+      @include respond(phone){
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

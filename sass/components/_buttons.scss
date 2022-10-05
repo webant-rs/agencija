@@ -1,0 +1,64 @@
+.btn{
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem;
+  background-color: #FF1999;
+  color: white !important;
+  padding: 0.75rem 2.5rem 0.75rem;
+  // font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+  border: 2px solid #FF1999;
+  border-radius: 0.5875rem;
+
+  &:hover{
+    background-color: transparent;
+    color: white !important;
+  }
+}
+
+.contact-btn{
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-transform: capitalize;
+  padding: 1.75rem 3.5rem 1.75rem;
+  border: 2px solid #fff;
+  border-radius: 0.4375rem;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  cursor: pointer;
+
+  @include respond(phone){
+    width: 100%;
+  }
+
+  &:hover{
+    background: #fff;
+    color: $color-primary;
+  }
+}
+
+.btn-call{
+  background-color: transparent;
+  color: white !important;
+  padding: 0.45rem 2.5rem 0.45rem;
+  // font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+  border: 2px solid #FF1999;
+  border-radius: 1.5875rem;
+  margin-top: 1.5rem;
+  align-self: center;
+
+  &:hover{
+    background-color: $color-pink;
+    color: white !important;
+  }
+}

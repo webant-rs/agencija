@@ -1,0 +1,35 @@
+.service{
+  padding: 10rem 0 7rem ;
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  &__col{
+    flex: 0 0 33.3333%;
+    padding: 0 1.5rem 0 1.5rem;
+  }
+
+  &__box {
+    padding: 6rem 2.9rem  3.5rem;
+    background-color: $color-secondary;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    @include respond(laptop-small){
+      padding: 1rem 2.9rem  1.5rem;
+    }
+  }
+
+  &__icon {
+    width: 7rem;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    padding: 1.3rem 0 0.5rem;
+    margin-bottom: 1rem;
+  }
+}

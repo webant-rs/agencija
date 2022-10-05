@@ -1,0 +1,62 @@
+// CONTAINER
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+	padding: 0 4%;
+	width: 100%;
+
+	@include respond(laptop-small) {
+		max-width: 103rem;
+	}
+	
+	@include respond(tab-land) {
+		max-width: 108rem;
+	}
+	
+	@include respond(phone-small) {
+		padding: 0 6%;
+	}
+	
+	&.no-gutters {
+		padding: 0;
+	}
+}
+
+.container-nav {
+	max-width: 140rem;
+	margin: 0 auto;
+	padding: 0 4%;
+	width: 100%;
+
+	@include respond(laptop-small) {
+		max-width: 103rem;
+	}
+	
+	@include respond(tab-land) {
+		max-width: 108rem;
+		padding: 0;
+	}
+	
+	// @include respond(phone-small) {
+	// 	// padding: 0 6%;
+	// }
+	
+	&.no-gutters {
+		padding: 0;
+	}
+}
+
+
+.container-fluid {
+	margin: 0 auto;
+	padding: 0 4%;
+	width: 100%;
+	
+	&.no-gutters {
+		padding: 0;
+	}
+}
+
+.background{
+	background-color: $color-primary !important;
+}

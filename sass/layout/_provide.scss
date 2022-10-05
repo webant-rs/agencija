@@ -1,0 +1,90 @@
+.provide {
+  background-color: $color-primary;
+  padding-bottom: 7rem;
+  padding-top: 9rem;
+  &__content{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title{
+    text-align: center;
+    font-size: 3.6rem;
+    h2{
+      span{
+        color: #FF1999;
+      }
+    }
+    p{
+      font-size: 1.7rem;
+      font-weight: 700;
+      max-width: 54.75rem;
+      margin: 0 auto 2rem;
+      @include respond (phone){
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col{
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 1.75rem 1.75rem 1.75rem;
+    display: flex;
+    align-items: stretch;
+    @include respond(tab-land){
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @include respond(tab-port){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    @include respond(phone){
+      padding: 1.75rem 0 1.75rem;
+    }
+  }
+  &__box{
+    padding: 1.5rem 2rem  2.5rem;
+    background-color: $color-secondary;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    @include respond(laptop-small) {
+      padding: 1rem 2.9rem  2rem;
+    }
+    
+    p{
+      margin-bottom: 1rem;
+      line-height: 140%;
+      font-size: 1.6rem;
+      @include respond(phone){
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__icon{
+    max-width: 14rem;
+    margin: 0 auto;
+    max-height: 16rem;
+  }
+  #red{
+    background-color: red;
+  }
+
+  &__heading{
+    font-size: 2.3rem;
+    margin-bottom: 1.4rem;
+    line-height: 1.5;
+  }
+}

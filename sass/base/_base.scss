@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    &.no-scroll{
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+    }
+    // @include respond(tab-land){
+    //     font-size: 56.25%;
+    // }
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-primary;
+    overflow: hidden;
+    
+    &::-webkit-scrollbar {
+        width: 10px;
+        
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-secondary;
+        height: 25%;
+    }
+
+    &::-webkit-scrollbar-thumb:window-inactive {
+        background-color: $color-white;
+    }
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: $color-white;
+}
+
+::selection {
+    background-color: $color-purple;
+    color: $color-white;
+}
+
+img{
+    width: 100%;
+}

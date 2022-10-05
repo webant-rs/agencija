@@ -1,0 +1,32 @@
+.bottom{
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  background-color: $color-primary;
+
+  &__content{
+    padding-top: 7rem;
+    border-top: 0.1rem solid rgb(27, 38, 64);
+    margin-top: 6rem;
+  }
+
+  &__row{
+    padding: 0 2rem 0 2rem;
+    text-align: center;
+  }
+
+  &__item{
+    width: 17rem;
+    margin-left: 6rem;
+    text-align: center;
+
+    @include respond(phone){
+      // text-align: start;
+      margin-left: 0;
+    }
+
+    i{
+      font-size: 5rem;
+    }
+  }
+
+}
