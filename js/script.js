@@ -30,36 +30,6 @@ const navSlide = () => {
 navSlide();
 
 
-$(document).ready(function(){
-    $('.news__slider').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: true,
-        prevArrow: $('.news__prev'),
-        nextArrow: $('.news__next'),
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: false
-                }
-            }
-        ]
-    });
-
-  });
 
   $(document).ready(function(){
 
@@ -126,3 +96,8 @@ $(document).ready(function(){
 
     });
 }
+
+var date = new Date().getFullYear();
+var spans = document.getElementsByClassName("year");
+
+spans.innerHtml= date;

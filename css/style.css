@@ -205,7 +205,7 @@ body {
     top: 12px;
     left: 15px;
     filter: blur(4px);
-    background: #231f20;
+    background: #FF1999;
     border-radius: 50%;
     transform: translateX(0);
     animation: dot 2.8s infinite; }
@@ -221,7 +221,7 @@ body {
       height: 16px;
       margin-left: 16px;
       filter: blur(4px);
-      background: #231f20;
+      background: #FF1999;
       border-radius: 50%; }
 
 .nav-parent {
@@ -337,6 +337,13 @@ body {
     max-width: 43rem;
     line-height: 6.3rem;
     margin-top: 5rem; }
+    @media only screen and (max-width: 62em) {
+      .header__heading {
+        max-width: 100%;
+        margin-top: 1rem;
+        line-height: 4.8rem;
+        font-size: 6rem;
+        text-align: center; } }
     @media only screen and (max-width: 36em) {
       .header__heading {
         margin-top: 1rem;
@@ -348,6 +355,13 @@ body {
     font-size: 3.75rem;
     margin-bottom: 2.5rem;
     font-weight: 700; }
+    @media only screen and (max-width: 62em) {
+      .header__under-heading {
+        max-width: 100%;
+        font-size: 5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.4; } }
     @media only screen and (max-width: 36em) {
       .header__under-heading {
         font-size: 2rem;
@@ -361,13 +375,39 @@ body {
     padding-bottom: 3.8rem;
     text-align: justify;
     letter-spacing: -0.1rem; }
+    @media only screen and (max-width: 62em) {
+      .header__intro {
+        max-width: 100%;
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 130%;
+        padding-bottom: 2rem; } }
     @media only screen and (max-width: 36em) {
       .header__intro {
         font-size: 1.7rem;
         text-align: center;
         letter-spacing: 0;
         line-height: 130%;
-        padding-bottom: 2rem; } }
+        padding-bottom: 1rem; } }
+  .header__button {
+    display: flex;
+    justify-content: flex-start; }
+    @media only screen and (max-width: 62em) {
+      .header__button {
+        justify-content: center; } }
+    @media only screen and (max-width: 36em) {
+      .header__button {
+        margin-bottom: 2rem; } }
+
+@media only screen and (max-width: 62em) {
+  .header__button > a {
+    margin-top: 0; } }
+
+@media only screen and (max-width: 36em) {
+  .header__button > a {
+    font-size: 1.3rem;
+    padding: 0.45rem 2rem 0.45rem; } }
 
 .footer {
   padding-top: 7rem;
@@ -625,13 +665,16 @@ body {
       @media only screen and (max-width: 75em) {
         .choose__list li {
           flex: 0 0 50%; } }
-      @media only screen and (max-width: 36em) {
+      @media only screen and (max-width: 62em) {
         .choose__list li {
           flex: 0 0 100%; } }
   .choose__single {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 62em) {
+      .choose__single {
+        margin-bottom: 4rem; } }
   .choose__icon {
     text-align: center; }
   .choose #choose-icon-first {
@@ -650,8 +693,11 @@ body {
       font-style: normal;
       line-height: 116.4%;
       letter-spacing: 0.01em; }
+      @media only screen and (max-width: 62em) {
+        .choose__text h3 {
+          font-size: 3rem; } }
     .choose__text p {
-      padding-bottom: 4rem;
+      padding-bottom: 2.5rem;
       max-width: 33rem;
       line-height: 140%;
       font-size: 1.6rem;
@@ -659,8 +705,30 @@ body {
       font-style: normal;
       font-weight: 500;
       letter-spacing: 0.01em; }
+      @media only screen and (max-width: 62em) {
+        .choose__text p {
+          font-size: 1.8rem;
+          padding-bottom: 2rem; } }
   .choose__image {
     width: 7.7rem; }
+  .choose #choose__more1 {
+    color: #F3A71C;
+    transition: all 0.3s ease 0s;
+    font-size: 1.8rem; }
+    .choose #choose__more1:hover {
+      color: #fff; }
+  .choose #choose__more2 {
+    color: #FF1999;
+    transition: all 0.3s ease 0s;
+    font-size: 1.8rem; }
+    .choose #choose__more2:hover {
+      color: #fff; }
+  .choose #choose__more3 {
+    color: #999A1C;
+    transition: all 0.3s ease 0s;
+    font-size: 1.8rem; }
+    .choose #choose__more3:hover {
+      color: #fff; }
 
 .client {
   background-color: #0f1932;
@@ -1026,14 +1094,52 @@ body {
     padding-right: 1.5rem; }
   .news__slider {
     width: 100%;
-    position: relative; }
+    display: flex;
+    overflow-x: scroll; }
+    .news__slider::-webkit-scrollbar {
+      background: #0f1932;
+      border-radius: 10px;
+      cursor: pointer;
+      height: 0.5em; }
+    .news__slider::-webkit-scrollbar-thumb {
+      background-color: white;
+      width: 20%;
+      border-radius: 10px;
+      background-clip: content-box; }
   .news__image {
     display: flex;
     justify-content: center;
-    padding-right: 1rem;
-    padding-left: 1rem; }
+    padding: 1rem 2rem;
+    border: 2px solid #FF1999;
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.3s ease 0s; }
+    @media only screen and (max-width: 36em) {
+      .news__image {
+        padding: 1rem 1rem; } }
+    .news__image:hover {
+      background-color: #0f1932; }
+  .news .news__icon {
+    position: absolute;
+    right: 0;
+    bottom: -3rem;
+    font-size: 3rem; }
   .news__box {
-    text-align: center; }
+    text-align: center;
+    background-color: #1b2640;
+    border: 4px solid #0f1932;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 10px;
+    border-radius: 1.5rem;
+    width: 285px;
+    cursor: pointer;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 36em) {
+      .news__box {
+        width: 260px; } }
   .news .news__prev {
     margin: 1rem;
     color: #fff;

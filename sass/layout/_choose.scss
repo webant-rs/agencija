@@ -29,7 +29,7 @@ padding-bottom: 4rem;
         flex: 0 0 50%
         ;
       }
-      @include respond(phone){
+      @include respond(tab-land){
         flex: 0 0 100%
         ;
       }
@@ -40,6 +40,9 @@ padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    @include respond(tab-land){
+      margin-bottom: 4rem;
+    }
   }
 
   &__icon{
@@ -67,9 +70,12 @@ padding-bottom: 4rem;
       font-style: normal;
       line-height: 116.4%;
       letter-spacing: 0.01em;
+      @include respond(tab-land){
+        font-size: 3rem;
+      }
     }
     p{
-      padding-bottom: 4rem;
+      padding-bottom: 2.5rem;
       max-width: 33rem;
       line-height: 140%;
       font-size: 1.6rem;
@@ -77,10 +83,40 @@ padding-bottom: 4rem;
       font-style: normal;
       font-weight: 500;
       letter-spacing: 0.01em;
+      @include respond(tab-land){
+        font-size: 1.8rem;
+        padding-bottom: 2rem;
+      }
     }
   }
 
   &__image{
     width: 7.7rem;
   }
+
+#choose__more1 {
+  color: #F3A71C;
+  transition: all 0.3s ease 0s;
+  font-size: 1.8rem;
+  &:hover{
+    color: #fff ;
+  }
+  }
+#choose__more2 {
+  color: #FF1999;
+  transition: all 0.3s ease 0s;
+  font-size: 1.8rem;
+  &:hover{
+    color: #fff ;
+  }
+}
+#choose__more3 {
+    color:#999A1C;
+    transition: all 0.3s ease 0s;
+    font-size: 1.8rem;
+    &:hover{
+      color: #fff ;
+    }
+}
+
 }
